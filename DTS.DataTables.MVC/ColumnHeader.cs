@@ -11,5 +11,9 @@ namespace DTS.DataTables.MVC
         public string  name { get; set; }
         public bool visible { get; set; }
         public int target { get; set; }
+        public bool sortable { get; set; }
+        public string width { get; set; }
+        public string className { get; set; }
     }
+
 }

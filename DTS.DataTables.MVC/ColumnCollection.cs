@@ -30,6 +30,7 @@ namespace DTS.DataTables.MVC
         /// <returns>The ordered enumeration of sorted columns.</returns>
         public IOrderedEnumerable<Column> GetSortedColumns()
         {
+
             return Data
                 .Where(_column => !String.IsNullOrWhiteSpace(_column.Data) && _column.IsOrdered)
                 .OrderBy(_c => _c.OrderNumber);
