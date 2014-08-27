@@ -54,7 +54,6 @@ namespace DTS.DataTables.MVC
             set { _data = value; }
         }
 
-
         public virtual string Width
         {
             get { return _width; }

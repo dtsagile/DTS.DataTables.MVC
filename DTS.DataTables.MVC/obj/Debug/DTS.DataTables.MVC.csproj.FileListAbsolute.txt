@@ -13,6 +13,5 @@ D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Debug\System.Web.Razor.xml
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Debug\System.Web.WebPages.xml
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Debug\System.Web.WebPages.Razor.xml
-D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\obj\Debug\DTS.DataTables.MVC.csprojResolveAssemblyReference.cache
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\obj\Debug\DTS.DataTables.MVC.dll
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\obj\Debug\DTS.DataTables.MVC.pdb

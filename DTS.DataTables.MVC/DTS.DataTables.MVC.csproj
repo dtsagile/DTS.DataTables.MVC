@@ -79,6 +79,7 @@
     <Compile Include="DataTablesBinderColumns.cs" />
     <Compile Include="DataTablesBinder.cs" />
     <Compile Include="DataTablesEnums.cs" />
+    <Compile Include="DataTablesHelpers.cs" />
     <Compile Include="DataTablesJsonBinder.cs" />
     <Compile Include="DataTablesReponse.cs" />
     <Compile Include="DataTablesColumnAttribute.cs" />
