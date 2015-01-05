@@ -17,7 +17,7 @@ namespace DTS.DataTables.MVC
         /// <summary>
         /// Gets the data collection.
         /// </summary>
-        public IEnumerable data { get; private set; }
+        public IEnumerable data { get; set; }
         /// <summary>
         /// Gets the total number of records (without filtering - total dataset).
         /// </summary>
