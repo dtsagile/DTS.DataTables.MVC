@@ -97,3 +97,67 @@ DTS.DataTables.MVC is a simple model binder for DataTables v1.10.4+.
         }
     }
 </pre>
+
+<h2>Usage: View</h2>
+@ {
+    ViewBag.Title = "Accounts";
+}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">@ViewBag.Title </h1>
+        </div>
+        <div class="col-lg-12">
+            @Html.ActionLink("New Account", "Create", new { controller = "Accounts", area = "Admin" }, new { @class = "btn btn-primary btn-sm" })
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:30px;">
+        <div class="col-lg-12">
+            <table id="grid" class="table table-bordered table-striped table-condensed">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+@section Styles {
+    @Styles.Render("~/styles/datatables")
+    <style type="text/css">
+    </style>
+}
+
+@section Scripts {
+    @Scripts.Render("~/scripts/dts")
+    @Scripts.Render("~/scripts/datatables")
+    @Scripts.Render("~/scripts/accounts")
+
+    <script>
+        var _dataTable;
+        $(function () {
+            _dataTable = dts.accounts.init({
+                _tableSelector: '#grid',
+                _columns : JSON.parse('@Html.Raw(ViewBag.Columns)'),
+                _getUrl: '@Url.Action("GetData", new {  controller = "Accounts", area = "Admin" })',
+                _editUrl: '@Url.Action("Edit", new { controller = "Accounts", area = "Admin"})'
+            });
+        });
+    </script>
+
+    <script type="text/html" id="tmplGridControlsEdit">
+        <div>
+            <a href="{{editUrl}}/{{id}}" class="text-success" title="Edit"><i class="glyphicon glyphicon-edit"></i></a>
+        </div>
+    </script>
+
+    <script type="text/html" id="tmplGridControlsCheckbox">
+        <div>
+            <input type="checkbox" class="{{selector}}" value="{{vale}}" {{checked}} />
+        </div>
+    </script>
+}
