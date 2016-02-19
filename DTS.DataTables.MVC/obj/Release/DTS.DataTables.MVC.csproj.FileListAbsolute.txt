@@ -15,3 +15,9 @@ D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Release\System.Web.WebPages.
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Release\System.Web.WebPages.Razor.xml
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\obj\Release\DTS.DataTables.MVC.dll
 D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\obj\Release\DTS.DataTables.MVC.pdb
+D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Release\DTS.DataTables.MVC.dll.config
+D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Release\System.Web.Http.dll
+D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Release\System.Net.Http.Formatting.dll
+D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Release\System.Web.Http.xml
+D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\bin\Release\System.Net.Http.Formatting.xml
+D:\github\DTS.DataTables.MVC\DTS.DataTables.MVC\obj\Release\DTS.DataTables.MVC.csprojResolveAssemblyReference.cache

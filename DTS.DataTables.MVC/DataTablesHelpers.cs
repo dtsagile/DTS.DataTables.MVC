@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 
 namespace DTS.DataTables.MVC
@@ -19,11 +21,21 @@ namespace DTS.DataTables.MVC
         {
             var list = new List<ColumnHeader>();
             var theType = typeof(T);
-            var properties = theType.GetProperties(System.Reflection.BindingFlags.Public);
 
+            var properties = theType.GetProperties().Where(x => x.IsDefined(typeof(DataTablesColumnAttribute), false));
+
+            foreach (var prop in properties)
+            {
+                var attr = prop.GetCustomAttributes(true).FirstOrDefault(x => x.GetType().ToString() == "DTS.DataTables.MVC.DataTablesColumnAttribute");
+                if (attr != null)
+                {
+                    list.Add(new ColumnHeader((DataTablesColumnAttribute) attr, prop.Name)); 
+                }
+            }
 
             return list;
         }
+
 
         public static TEnum ParseEnum<TEnum>(this string value, bool ignoreCase = false) where TEnum : struct
         {
@@ -32,9 +44,7 @@ namespace DTS.DataTables.MVC
                throw new Exception("value is not valid member of enum");
             }
             return result;
-        }
-
-        
+        }        
 
     }
 }
